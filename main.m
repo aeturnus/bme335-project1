@@ -13,7 +13,7 @@ for x = 1:length(a)
     for y = 1: length(b)
         % calculate values of each pdf matrix
         pdf_1(x,y) = alp * ( 0.05 + a(x)^2 ) * ( (b(y)-1)^4 + 0.025 );
-        pdf_2(x,y) = bet * ( 1 - a(x)^2 ) * ( 0.05 + b(y)^4 + (a(x)^2) * (b(y)^2) /2 ) );
+        pdf_2(x,y) = bet * ( 1 - a(x)^2 ) * ( 0.05 + b(y)^4 + (a(x)^2) * (b(y)^2) /2 );
     end
 end
 %plot first pdf 
