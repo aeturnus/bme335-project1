@@ -17,8 +17,12 @@ for x = 1:length(a)
     end
 end
 %plot first pdf 
+subplot(1,2,1);
 surf(a,b,pdf_1);
+title('pdf_1');
 hold on
 %plot second pdf
+subplot(1,2,2);
 surf(a,b,pdf_2);
+title('pdf_2');
 hold on
