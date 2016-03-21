@@ -12,17 +12,21 @@ pdf_2 = []; %pdf matrix of the second equation
 for x = 1:length(a)
     for y = 1: length(b)
         % calculate values of each pdf matrix
-        pdf_1(x,y) = alp * ( 0.05 + a(x)^2 ) * ( (b(y)-1)^4 + 0.025 );
-        pdf_2(x,y) = bet * ( 1 - a(x)^2 ) * ( 0.05 + b(y)^4 + (a(x)^2) * (b(y)^2) /2 );
+        pdf_1(y,x) = alp * ( 0.05 + a(x)^2 ) * ( (b(y)-1)^4 + 0.025 );
+        pdf_2(y,x) = bet * ( 1 - a(x)^2 ) * ( 0.05 + b(y)^4 + (a(x)^2) * (b(y)^2) /2 );
     end
 end
 %plot first pdf 
 subplot(1,2,1);
 surf(a,b,pdf_1);
 title('pdf_1');
+xlabel('a');
+ylabel('b');
 hold on
 %plot second pdf
 subplot(1,2,2);
 surf(a,b,pdf_2);
 title('pdf_2');
+xlabel('a');
+ylabel('b');
 hold on
