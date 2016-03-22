@@ -6,6 +6,8 @@ scoresT2 = zeros(length(b),length(a));
 %Quadrant 1: High A, low B --> High T1
 %Quadrant 4: High B, low A --> High T2
 
+% works on a scoring system, assigning points to each threshold
+
 % Will test boundaries for quadrant 1 and 4 and get the values
 for testA = 1: length(a)
     for testB = 1: length(b)
@@ -39,7 +41,6 @@ for testA = 1: length(a)
         
         scoresT1(testB,testA) = scoreT1 - penaltyT1;
         scoresT2(testB,testA) = scoreT2 - penaltyT2;
-
         scores(testB,testA) = scoresT1(testB,testA) + scoresT2(testB,testA);  % hold the total score for a threshold pair
     end
 end
