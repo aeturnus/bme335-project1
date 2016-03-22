@@ -46,7 +46,7 @@ for testA = 1: length(a)
 end
 
 % find A and B thresholds that will maximize the probability of either T1 or T2
-[maxT,iT] = max(sums(:)); % get largest value in linear index
-[maxB, maxA] = ind2sub(size(sums),iT);
+[maxT,iT] = max(scores(:)); % get largest value in linear index
+[maxB, maxA] = ind2sub(size(scores),iT);
 fprintf('Highest probability of classifying as T1 or T2 occurs at a threshold of:\na_t = %g\nb_t=%g\nScore: %g\n',a(maxA),b(maxB),maxT);
 
