@@ -1,3 +1,4 @@
+function [ maxA, maxB ] = optimize_thresholds(a,b,pdf_1,pdf_2)
 % This will print out the threshold values to maximize getting either T1 or T2
 
 scores = zeros(length(b),length(a));
@@ -50,3 +51,4 @@ end
 [maxB, maxA] = ind2sub(size(scores),iT);
 fprintf('Highest probability of classifying as T1 or T2 occurs at a threshold of:\na_t = %g\nb_t=%g\nScore: %g\n',a(maxA),b(maxB),maxT);
 
+end

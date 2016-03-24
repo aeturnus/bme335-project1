@@ -5,8 +5,10 @@
 
 %T1 Cells:
 PQT1 = zeros(2,2);
-a_t = 0.65; % boundary vars
-b_t = 0.60;
+
+[b_t, a_t] = optimize_thresholds(a,b,pdf_1,pdf_2); % boundary vars
+a_t = a(a_t);
+b_t = b(b_t);
 %Quadrant 1: High A, low B --> High T1
 xt = length(a);
 while xt > a_t*length(a)

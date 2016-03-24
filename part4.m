@@ -1,8 +1,8 @@
 %% Part 4: The Bayesian classifier
 
 %uniformative prior that considers P(T1) = P(T2) = .5
-PT1 = .5;
-PT2 = .5;
+PT1 = 1/3;
+PT2 = 1-PT1;
 
 %Total Probability Theorem:
 %  P(Q1) = P(Q1|T1)P(T1) + P(Q1|T2)P(T2)
