@@ -99,3 +99,15 @@ end
 %for samples with different T1:T2 ratios?
 %
 %
+t1 = (0:1:100);
+t2 = (0:1:100);
+et1 = t1*(PQT1(1,2) + PQT1(2,1) + PQT1(2,2));
+et2 = t2*(PQT2(1,2) + PQT2(2,1) + PQT2(1,1));
+figure;
+plot(t1, et1, 'r', 'LineWidth', 2);
+hold on;
+plot(t2, et2, 'b', 'LineWidth', 2);
+xlabel('Number of Cells');
+ylabel('Number of Not Correctly Classified Cells');
+legend('T1', 'T2');
+title('Classification Error for P(Q|T)');
