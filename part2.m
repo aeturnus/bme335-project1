@@ -6,7 +6,7 @@
 %T1 Cells:
 PQT1 = zeros(2,2);
 
-[b_t, a_t] = optimize_thresholds(a,b,pdf_1,pdf_2); % boundary vars
+[a_t, b_t] = optimize_thresholds(a,b,pdf_1,pdf_2); % boundary vars
 a_t = a(a_t);
 b_t = b(b_t);
 %Quadrant 1: High A, low B --> High T1
