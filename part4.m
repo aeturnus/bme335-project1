@@ -22,3 +22,14 @@ PT2Q = (PQT2(:,:)*PT2)./PQ(:,:);
 %How good is the Bayesian classifier?
 %
 %
+t = (0:1:100);
+et1q = t*(PT1Q(1,2)*PQ(1,2) + PT1Q(2,1)*PQ(2,1) + PT1Q(2,2)*PQ(2,2));
+et2q = t*(PT2Q(1,1)*PQ(1,1) + PT2Q(1,2)*PQ(1,2) + PT2Q(2,1)*PQ(2,1));
+figure;
+plot(t,et1q, 'r', 'LineWidth', 2);
+hold on;
+plot(t,et2q, 'b', 'LineWidth', 2);
+xlabel('Number of Cells');
+ylabel('Cells Predicted in Error');
+legend('E[T1|Q1'']', 'E[T2|Q4'']');
+title('Classification Error for P(T|Q)');
